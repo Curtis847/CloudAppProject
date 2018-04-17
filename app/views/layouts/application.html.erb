@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hospital</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="nav" id="nav">
+          <li>
+            <%= render 'devise/menu/registration_items' %>
+          </li>
+          <li>
+            <%= render 'devise/menu/login_items' %>
+          </li>
+          <li class="search-bar">
+            <%= form_tag(patients_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search by lastname" %>
+            <%= submit_tag "Search" %>
+          </li>
+        </ul>
+        
+  <% end %>
+        
+      </div>
+    </nav>
+    <div class="jumbotron">
+      
+    <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
+    </div>
+  </body>
+</html>
