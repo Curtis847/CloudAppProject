@@ -9,23 +9,16 @@
 <%= @patient.injury %>
 </p>
 <!-- Display the reviews of a movie -->
-<h2>Visits</h2>
 <% @patient.visits.each do |visit| %>
 <p>
 <b>Visit details:</b>
 <%= visit.details %>
 </p>
 <% end %>
-<%= link_to 'Edit Patient', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patient_path %> |
-<%= link_to 'Show Visit', patient_visits_path(@patient) %>
-
-<%= link_to 'Edit', edit_patient_visit_path(@patient, @visit) %> |
-<%= link_to 'Back', patient_visits_path(@patient) %>
+<%= link_to 'Patient Information', patient_path %> |
+<%= link_to 'Show All Visits', patient_visits_path(@patient) %> |
+<%= link_to 'Edit Visit', edit_patient_visit_path(@patient, @visit) %>
 
 <p id="notice"><%= notice %></p>
-<p>
-    <strong>First Name:</strong>
-    <%= @patient.firstname %>
-</p>
+
 

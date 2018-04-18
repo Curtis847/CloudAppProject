@@ -1,5 +1,7 @@
 class VisitsController < ApplicationController
+  
   def index
+    
     @patient = Patient.find(params[:patient_id])
     
     @visits = @patient.visits
@@ -61,7 +63,7 @@ end
   
   # DELETE /movies/1/reviews/2
   def destroy
-    @patient = Movie.find(params[:patient_id])
+    @patient = Patient.find(params[:patient_id])
     @visit = Visit.find(params[:id])
     @visit.destroy
     respond_to do |format|
