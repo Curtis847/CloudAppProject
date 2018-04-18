@@ -2,6 +2,9 @@
     <li>
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
     </li>
+    <li>
+        <%= link_to 'Patients', controller: 'patients' %>
+    </li>
     
 <%else%>
     <li>
