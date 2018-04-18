@@ -1,0 +1,20 @@
+<h1>Visits in <%= @patient.firstname %></h1>
+<table>
+<tr>
+<th>Visit details</th>
+</tr>
+<% for visit in @visits %>
+<tr>
+<td><%= visit.details %></td>
+<td><%= link_to 'Show', patient_visit_path(@patient, visit)
+%></td>
+<td><%= link_to 'Edit', edit_patient_visit_path(@patient, visit)
+%></td>
+<td><%= link_to 'Destroy', patient_visit_path(@patient, visit),
+:confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+<% end %>
+</table>
+<br />
+<%= link_to 'New visit', new_patient_visit_path(@patient) %>
+<%= link_to 'Back to Patient', @patient %>
