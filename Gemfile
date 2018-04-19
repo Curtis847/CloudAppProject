@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.0'
+
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
@@ -71,4 +71,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails_12factor', group: :production
+
+ruby '2.4.0'
 
