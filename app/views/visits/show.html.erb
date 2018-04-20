@@ -8,6 +8,14 @@
 <strong>Injury:</strong>
 <%= @patient.injury %>
 </p>
+<p>
+    <strong>Infection</strong>
+    <%= @patient.infection %>
+</p>
+<p>
+    <strong>Observations</strong>
+    <%= @patient.observations %>
+</p>
 <!-- Display the reviews of a movie -->
 <% @patient.visits.each do |visit| %>
 <p>
