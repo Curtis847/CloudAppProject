@@ -18,10 +18,7 @@
 </p>
 <!-- Display the reviews of a movie -->
 <% @patient.visits.each do |visit| %>
-<p>
-<b>Visit details:</b>
-<%= visit.details %>
-</p>
+
 <% end %>
 <%= link_to 'Patient Information', patient_path %> |
 <%= link_to 'Show All Visits', patient_visits_path(@patient) %> |
