@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p class="test">
+<div>
+<p>
   <strong>Firstname:</strong>
   <%= @patient.firstname %>
 </p>
@@ -39,6 +40,8 @@
   <strong>Observations:</strong>
   <%= @patient.observations %>
 </p>
+
+</div>
 
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
